@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <xs:element name="teachers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="teacher" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name= "firstName" type="xs:string"/>
+                            <xs:element name= "surname" type="xs:string"/>    
+                            <xs:element name= "birthday" type="xs:date"/>
+                            <xs:element name= "telephone" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                 <xs:element name= "module" type="xs:string" maxOccur="5"/>
+            </xs:sequence>
+            <xs:attribute name ="dni" type="sx:string"/>
+            <xs:element name="tutor">
+                <xs:complexType>
+                    <xs:attribute name="course" type="xs:integer"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="service"> 
+                
+            </xs:element>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
